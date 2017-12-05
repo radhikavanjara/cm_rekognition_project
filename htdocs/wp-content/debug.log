@@ -1,0 +1,69 @@
+[01-Dec-2017 06:25:28 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Operation not found: CreateCollection' in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClient.php:215
+Stack trace:
+#0 /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClientTrait.php(78): Aws\AwsClient->getCommand('createCollectio...', Array)
+#1 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(59): Aws\AwsClient->__call('createCollectio...', Array)
+#2 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(59): Aws\S3\S3Client->createCollection(Array)
+#3 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(25): getCollection(Object(Aws\S3\S3Client))
+#4 /var/www/htdocs/cms/wp-settings.php(304): include_once('/var/www/htdocs...')
+#5 /var/www/htdocs/wp-config.php(121): require_once('/var/www/htdocs...')
+#6 /var/www/htdocs/cms/wp-load.php(42): require_once('/var/www/htdocs...')
+#7 /var/www/htdocs/cms/wp-blog-header.php(13): require_once('/var/www/htdocs...')
+ in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClient.php on line 215
+[01-Dec-2017 06:34:56 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Operation not found: CreateCollection' in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClient.php:215
+Stack trace:
+#0 /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClientTrait.php(78): Aws\AwsClient->getCommand('createCollectio...', Array)
+#1 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(59): Aws\AwsClient->__call('createCollectio...', Array)
+#2 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(59): Aws\S3\S3Client->createCollection(Array)
+#3 /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php(25): getCollection(Object(Aws\S3\S3Client))
+#4 /var/www/htdocs/cms/wp-settings.php(304): include_once('/var/www/htdocs...')
+#5 /var/www/htdocs/wp-config.php(121): require_once('/var/www/htdocs...')
+#6 /var/www/htdocs/cms/wp-load.php(42): require_once('/var/www/htdocs...')
+#7 /var/www/htdocs/cms/wp-blog-header.php(13): require_once('/var/www/htdocs...')
+ in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/AwsClient.php on line 215
+[01-Dec-2017 07:24:58 UTC] PHP Fatal error:  Class 'AmazonRekognitionClientBuilder' not found in /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php on line 31
+[05-Dec-2017 04:08:27 UTC] PHP Fatal error:  Class 'AmazonRekognitionClientBuilder' not found in /var/www/htdocs/wp-content/plugins/wp_rekognition/function.php on line 31
+[05-Dec-2017 04:08:50 UTC] Aws\Result Object
+(
+    [data:Aws\Result:private] => Array
+        (
+            [StatusCode] => 200
+            [CollectionArn] => aws:rekognition:us-west-2:140109379489:collection/example1
+            [FaceModelVersion] => 2.0
+            [@metadata] => Array
+                (
+                    [statusCode] => 200
+                    [effectiveUri] => https://rekognition.us-west-2.amazonaws.com
+                    [headers] => Array
+                        (
+                            [content-type] => application/x-amz-json-1.1
+                            [date] => Tue, 05 Dec 2017 04:08:56 GMT
+                            [x-amzn-requestid] => 031a6508-d972-11e7-930c-b111a40ab85c
+                            [content-length] => 120
+                            [connection] => keep-alive
+                        )
+
+                    [transferStats] => Array
+                        (
+                            [http] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+[05-Dec-2017 04:17:51 UTC] PHP Fatal error:  Uncaught exception 'Aws\Rekognition\Exception\RekognitionException' with message 'Error executing "CreateCollection" on "https://rekognition.us-west-2.amazonaws.com"; AWS HTTP error: Client error: `POST https://rekognition.us-west-2.amazonaws.com` resulted in a `400 Bad Request` response:
+{"__type":"ResourceAlreadyExistsException","Code":"ResourceAlreadyExistsException","Message":"The collection id: example (truncated...)
+ ResourceAlreadyExistsException (client): The collection id: example1 already exists - {"__type":"ResourceAlreadyExistsException","Code":"ResourceAlreadyExistsException","Message":"The collection id: example1 already exists"}'
+
+exception 'GuzzleHttp\Exception\ClientException' with message 'Client error: `POST https://rekognition.us-west-2.amazonaws.com` resulted in a `400 Bad Request` response:
+{"__type":"ResourceAlreadyExistsException","Code":"ResourceAlreadyExistsException","Message":"The collection id: example (truncated...)
+' in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/gu in /var/www/htdocs/wp-content/plugins/wp_rekognition/vendor/aws/aws-sdk-php/src/WrappedHttpHandler.php on line 192
